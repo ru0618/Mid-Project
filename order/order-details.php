@@ -71,7 +71,7 @@ $username = $userRow["name"];
 
 
 
-        <table class="table table-bordered mb-5 text-center font-monospace">
+        <table class="table table-bordered mb-5 text-center ">
                 <input type="hidden" name="id" value="<?= $row["order_id"] ?>">
                 <tr>
                     <th>訂購者</th>

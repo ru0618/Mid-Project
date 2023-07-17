@@ -37,6 +37,12 @@ ORDER BY order_id ASC
     <!-- Bootstrap CSS v5.2.1 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
+    <style>
+        .shadow{
+            background-color: #C4E1FF;
+            color: #000;
+        }
+    </style>
 
 </head>
 
@@ -104,7 +110,7 @@ ORDER BY order_id ASC
                         <td>
                         $<?= $row["total_amount"] ?>
                         </td>
-                        <td><a href="order-update.php?order_id=<?= $row["order_id"] ?> " class="btn btn-info shadow  rounded">編輯</a></td>
+                        <td><a href="order-update.php?order_id=<?= $row["order_id"] ?> " class="btn  shadow  rounded">編輯</a></td>
                     </tr>
                 <?php endforeach; ?>
             </tbody>
