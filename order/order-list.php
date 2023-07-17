@@ -113,7 +113,11 @@ $statusRows = $resultStatus->fetch_all(MYSQLI_ASSOC);
             background-color: #66B3FF;
             color: #fff;
         }
-        .shadow{
+        .edit1{
+            background-color: 	#ECECFF;
+            color: #000;
+        }
+        .edit2{
             background-color: #C4E1FF;
             color: #000;
         }
@@ -227,6 +231,7 @@ $statusRows = $resultStatus->fetch_all(MYSQLI_ASSOC);
                     <th>訂單狀態</th>
                     <th>下單時間</th>
                     <th>總金額</th>
+                    <th>修改優惠券</th>
                     <th>修改訂單狀態</th>
                 </tr>
             </thead>
@@ -245,7 +250,8 @@ $statusRows = $resultStatus->fetch_all(MYSQLI_ASSOC);
                         <td>
                             $<?= $row["total_amount"] ?>
                         </td>
-                        <td><a href="order-update.php?order_id=<?= $row["order_id"] ?> " class="btn  shadow   rounded">編輯</a></td>
+                        <td><a href="order-details.php?order_id=<?= $row["order_id"] ?> " class="btn  shadow   rounded edit1">編輯</a></td>
+                        <td><a href="order-update.php?order_id=<?= $row["order_id"] ?> " class="btn  shadow   rounded edit2">編輯</a></td>
                     </tr>
                 <?php endforeach; ?>
             </tbody>
