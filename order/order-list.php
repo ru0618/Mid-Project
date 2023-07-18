@@ -206,11 +206,11 @@ $statusRows = $resultStatus->fetch_all(MYSQLI_ASSOC);
                 <button class="nav-item  text-light bg-secondary ">
                     <a class="nav-link p-1  
                     <?php
-                    if (!isset($_GET["status_id"])) echo "active" ?>" aria-current="page" href="order-list.php"><i class="fa-solid fa-border-all"></i> 全部</a>
+                    if (!isset($_GET["status_id"])) echo "active" ?>" aria-current="page" href="order-list.php?sort=<?= $sort ?>&type=<?= $type ?>"><i class="fa-solid fa-border-all"></i> 全部</a>
                 </button>
                 <?php foreach ($statusRows as $status) : ?>
                     <button class="nav-item  <?php if (isset($_GET["status_id"]) && $_GET["status_id"] == $status["status_id"]) echo "active"; ?>" >
-                        <a class="nav-link p-1  " href="order-list.php?status_id=<?= $status["status_id"] ?>"><?= $status["status_name"] ?></a>
+                        <a class="nav-link p-1  " href="order-list.php?status_id=<?= $status["status_id"] ?>&sort=<?= $sort ?>&type=<?= $type ?>"><?= $status["status_name"] ?></a>
                     </button>
                 <?php endforeach; ?>
             </nav>
